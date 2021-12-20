@@ -11,17 +11,19 @@ const ItemsGrid = () => {
   }, []);
   return (
     <div className="products-container">
-      {items.map((item) => {
-        return (
-          <Item
-            id={item.id}
-            productName={item.productName}
-            price={item.price}
-            image={item.image}
-            productDesc={item.productInfo}
-          />
-        );
-      })}
+      <div className="products-wrapper">
+        {items.map((item) => {
+          return (
+            <Item
+              id={item.id}
+              productName={item.productName}
+              price={item.price}
+              image={item.image}
+              productDesc={item.productInfo}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };
